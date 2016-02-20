@@ -9,8 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.shobhit.moodle_app.MainActivity">
 
-    <!--android:layout_centerVertical="true"-->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +31,7 @@
         android:layout_marginLeft="20dp"/>
 
     <EditText
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:hint="Enter Username"
@@ -53,21 +51,23 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
         android:hint="Enter Password"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_toRightOf="@id/textView2"
+        android:layout_marginLeft="20dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="20dp"
+        android:onClick="Login"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -76,6 +76,7 @@
         android:id="@+id/button2"
         android:layout_below="@+id/button"
         android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignStart="@+id/button"
+        android:onClick="Clear"/>
 
 </RelativeLayout>
